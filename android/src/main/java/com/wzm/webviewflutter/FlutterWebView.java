@@ -533,7 +533,7 @@ public class FlutterWebView implements PlatformView, MethodCallHandler{
     if (WebViewFlutterPlugin.activity==null||!FileUtil.checkSDcard(WebViewFlutterPlugin.activity)) {
       return;
     }
-    String[] selectPicTypeStr = {"拍照", "图库"};
+    String[] selectPicTypeStr = {"Tirar uma Foto", "Enviar arquivo"};
     new AlertDialog.Builder(WebViewFlutterPlugin.activity)
             .setOnCancelListener(new ReOnCancelListener())
             .setItems(selectPicTypeStr,
@@ -640,7 +640,7 @@ public class FlutterWebView implements PlatformView, MethodCallHandler{
       if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
         openCamera();
       } else {
-        Toast.makeText(WebViewFlutterPlugin.activity, "拍照需要您授予相机权限", Toast.LENGTH_SHORT).show();
+        Toast.makeText(WebViewFlutterPlugin.activity, "Você precisa conceder permissão à câmera para tirar fotos", Toast.LENGTH_SHORT).show();
         if (uploadMessage != null) {
           uploadMessage.onReceiveValue(null);
           uploadMessage = null;
