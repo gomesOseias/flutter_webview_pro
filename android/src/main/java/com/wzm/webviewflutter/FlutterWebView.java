@@ -519,7 +519,7 @@ public class FlutterWebView implements PlatformView, MethodCallHandler{
     intent1.setDataAndType(
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
     Intent chooser = new Intent(Intent.ACTION_CHOOSER);
-    chooser.putExtra(Intent.EXTRA_TITLE, "选择图片");
+    chooser.putExtra(Intent.EXTRA_TITLE, "Selecione a imagem");
     chooser.putExtra(Intent.EXTRA_INTENT,intent1);
 
     if (WebViewFlutterPlugin.activity != null){
