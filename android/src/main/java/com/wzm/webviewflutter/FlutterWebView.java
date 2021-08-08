@@ -534,7 +534,7 @@ public class FlutterWebView implements PlatformView, MethodCallHandler{
       return;
     }
     String[] selectPicTypeStr = {"Tirar uma Foto", "Enviar arquivo"};
-    new AlertDialog.Builder(WebViewFlutterPlugin.activity)
+    new AlertDialog.Builder(WebViewFlutterPlugin.activity, AlertDialog.THEME_DEVICE_DEFAULT_LIGHT)
             .setOnCancelListener(new ReOnCancelListener())
             .setItems(selectPicTypeStr,
                     new DialogInterface.OnClickListener() {
